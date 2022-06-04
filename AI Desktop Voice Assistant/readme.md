@@ -2,6 +2,7 @@
 ## 1.PIP install wikipedia
 ## 2.PIP install pyttsx3
 ## 3.PIP install speechRecognition
+## 4.PIP install pyqt5
 
 
 # 💗*****Features of the created application***** 💗
