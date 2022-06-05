@@ -27,7 +27,7 @@ def wishme():
         
         speak("Jarvis at your service, how may i help you ?")
 def takeCommand():
- #it takes microphone input from the user and return string output
+  #it takes microphone input from the user and return string output
     r= sr.Recognizer()
     with sr.Microphone()as source:
         print("I am listening")
