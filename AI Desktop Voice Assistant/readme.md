@@ -6,6 +6,7 @@
 
 
 # 💗*****Features of the created application***** 💗
+##- GUI based(added at version 2.0)
 ## -can open youtube
 ## -can open google
 ## -can open wikipedia
