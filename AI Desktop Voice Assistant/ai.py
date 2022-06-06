@@ -71,35 +71,33 @@ class mainT(QThread):
     def JARVIS(self):
        wishme()
        while True:
-      
-    
-        self.query=self.STT().lower()
+        self.query=self.STT()
 
-        if 'wikipedia' in query:
+        if 'wikipedia' in self.query:
            speak('searching wikipedia.....')
            query = query.replace("wikipedia","")
            result = wikipedia.summary(query, sentences=2)
            speak("Accoding to Wikipedia")
            speak(result)
-        elif 'open youtube' in query:
+        elif 'open youtube' in self.query:
            webbrowser.open("youtube.com")
-        elif 'open google' in query:
+        elif 'open google' in self.query:
            webbrowser.open("google.com")
-        elif 'open stackoverflow' in query:
+        elif 'open stackoverflow' in self.query:
            webbrowser.open("stackoverflow.com")
-        elif'play music' in query:
+        elif'play music' in self.query:
            music_dir = 'D:\\New folder\\Audio'
            songs= os.listdir(music_dir)
            print(songs)
            os.startfile(os.path.join(music_dir,songs[0]))
-        elif 'the time' in query:
+        elif 'the time' in self.query:
             strTime= datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir, the time is {strTime}") 
-        elif 'open code' in query:
+        elif 'open code' in self.query:
            codePath="D:\\Microsoft VS Code\\Code.exe"
            os.startfile(codePath)
-        elif 'turn off'in query :
-           break  
+        elif 'turn off'in self.query :
+           sys.exit()
 
        """elif 'email to harry' in query:
            try:
@@ -123,14 +121,14 @@ class Main(QMainWindow,FROM_MAIN):
         self.label_7=QLabel
         
         Dspeak = mainT()
-        self.label_7=QMovie("./jarvis/gifloader.gif",QByteArray(),self)
+        self.label_7=QMovie("./gifloader.gif",QByteArray(),self)
         self.label_7.setCacheMode(QMovie.CacheAll)
         self.label_6.setMovie(self.label_7)
         self.label_7.start()
 
         self.ts =time.strftime("%A,%d %B")
         Dspeak.start()
-        self.label.setPixmap(QPixmap("./jarvis/bg.png"))
+        self.label.setPixmap(QPixmap("./bg.png"))
         self.label_5.setText("<font size=8 color='white'>"+self.ts+"</font>")
         self.label_5.setFont(QFont(QFont('Acens',8)))
 
