@@ -121,21 +121,18 @@ class Main(QMainWindow,FROM_MAIN):
         self.setupUi(self)
         self.setFixedSize(1920,1080)
         self.label_7=QLabel
-        self.exitB.setStyleSheet("background-image:url(./exit - Copy.png);\n"
-        "border.none;")
-        self.exitB.clicked.connect(self.close)
-        self.setWindowFlag(flags)
+        
         Dspeak = mainT()
-        self.label_7=Qmovie("./gifloader.gif",QByteArray(),self)
+        self.label_7=QMovie("./jarvis/gifloader.gif",QByteArray(),self)
         self.label_7.setCacheMode(QMovie.CacheAll)
         self.label_6.setMovie(self.label_7)
         self.label_7.start()
 
         self.ts =time.strftime("%A,%d %B")
         Dspeak.start()
-        self.label.setPixmap(QPixmap("./bg.png"))
+        self.label.setPixmap(QPixmap("./jarvis/bg.png"))
         self.label_5.setText("<font size=8 color='white'>"+self.ts+"</font>")
-        self.label_5.setFont(Qfont(Qfont('Acens',8)))
+        self.label_5.setFont(QFont(QFont('Acens',8)))
 
 
 app= QtWidgets.QApplication(sys.argv)
