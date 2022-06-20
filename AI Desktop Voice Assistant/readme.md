@@ -5,7 +5,7 @@
 ## 4.PIP install pyqt5
 
 
-# 💗*****Features of the created application***** 💗
+# 💗*****Features of the created application:***** 💗
 ##- GUI based(added at version 2.0)
 ## -can open youtube
 ## -can open google
